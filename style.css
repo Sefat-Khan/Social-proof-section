@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+p,h1,h2,h3{
+    overflow-wrap: break-word;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+    font-family: League Spartan;
+}
+.top, .bottom{
+    position: absolute;
+}
+.bottom{
+    bottom: 0;
+    right: 0;
+}
+main{
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.summary{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding: 4rem;
+    gap: 2rem;
+}
+.info{
+    padding-right: 12rem;
+}
+.info h1{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-right: 5rem;
+    margin-bottom: 1rem;
+    color: hsl(300, 43%, 22%);
+}
+.info p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(300, 43%, 22%);
+    padding-right: 6rem;
+}
+.rating{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+}
+.reviews, .report, .best-tech{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    background-color: hsl(300, 24%, 96%);
+    padding: 0.7em 4em;
+    border-radius: 0.5rem;
+    color: hsl(300, 43%, 22%);
+}
+.rated p{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.reviews{
+    margin-right: 6rem;
+}
+.best-tech{
+    margin-left: 6rem;
+}
+.comment{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 4rem;
+}
+.card{
+    background-color: hsl(300, 43%, 22%);
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+.profile{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.profile img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.profile-info h2{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 100%);
+}
+.profile-info h3{
+    font-weight: 700;
+    color: hsl(333, 80%, 67%);
+}
+.card p{
+    line-height: 1.5;
+    color: white;
+}
+.c1{
+    margin-bottom: 2rem;
+}
+.c2{
+    margin: 1rem 0 1rem;
+}
+.c3{
+    margin: 2rem 0 0;
+}
+
+@media (max-width:600px) {
+    main{
+        height: 100rem;
+    }
+    .summary{
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 40rem;
+        padding: 0;
+        margin-top: 3rem;
+    }
+    .info{
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .info h1{
+        padding: 0 1rem;
+    }
+    .info p{
+        padding: 0 1rem;
+    }
+    .rating{
+        margin-top: 1rem;
+    }
+    .reviews,.report, .best-tech{
+        padding: 0.5em 6em;
+        margin: 0;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .report{
+        padding: 0.5em 5em;
+    }
+    .comment{
+        grid-template-columns: 1fr;
+        height: 56rem;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin-bottom: 7rem;
+    }
+    .card{
+        margin: 0;
+        height: 16rem;
+        padding: 1.5rem;
+    }
+    
+}
